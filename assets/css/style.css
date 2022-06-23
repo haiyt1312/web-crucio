@@ -20,7 +20,9 @@ body{
     background: #111;
     display: block;
 }
-/* HEADER */
+html{
+    scroll-behavior: smooth;
+}
 .header{
     font-size: 12px;
     height: 55px;
@@ -58,7 +60,6 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
-/* NAVBAR */
 .navbar{
     height: 100px;
     padding: 0 5%;
@@ -67,6 +68,8 @@ body{
     min-height: 50px;
     margin-bottom: 20px;
     border: 1px solid transparent;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
 }
 .navbar-fixed-top {
     top: 54px;
@@ -75,7 +78,6 @@ body{
     right: 0;
     left: 0;
     background-color: rgba(10, 10, 10, 0.9);
-    box-shadow: 0 3px 5px rgba(173, 0, 255, 0.3);
     height: 90px;
 }
 .navbar-header {
@@ -99,6 +101,12 @@ a{
     height: auto;
     border: none;
     vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+.navbar.sticky .navbar-title img {
+    max-width: 100px;
+    height: auto;
+    transition: all 0.5s ease-in-out;
 }
 .navbar-collapse {
     max-height: 340px;
@@ -135,7 +143,7 @@ ul {
 }
 .navbar-nav li{
     float: none;
-    height: 100px;
+    height: 60px;
     padding: 0px 20px;
     display: table-cell;
     vertical-align: middle;
@@ -148,9 +156,34 @@ ul {
     font-weight: 300;
     letter-spacing: 2px;
     padding: 0;
+    vertical-align: middle;
 }
 .nav li a{
     display: block;
+}
+.navbar.sticky{
+    top: 54px;
+    border-width: 0 0 1px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: rgba(10, 10, 10, 0.9);
+    box-shadow: 0 3px 5px rgba(173, 0, 255, 0.3);
+    height: 70px;
+}
+.navbar.sticky .navbar-title {
+    height: 70px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #AD00FF;
+    display: table-cell;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+.navbar.sticky .navbar-nav.nav-text-light  li {
+    height: 45px;
+    transition: all 0.5s ease-in-out;
 }
 .main-top {
     width: 100%;
@@ -368,13 +401,13 @@ ion-icon{
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
+    display: block;
 }
 .team .mask {
     background-color: #AD00FF;
     opacity: 0;
     width: 300px;
     height: 400px;
-    position: absolute;
     overflow: hidden;
     text-align: center;
     top: 0;
@@ -636,6 +669,10 @@ input{
     padding-right: 15px;
     padding-left: 15px;
 }
+.col12 {
+    width: 100%;
+    float: left;
+}
 input {
     width: 100%;
     border: none;
@@ -680,3 +717,45 @@ textarea {
     padding-top: 10px;
     text-align: center;
 }
+#btnTop{
+    display: block;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    z-index: 9999;
+}
+#btnTop a{
+    border-radius: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    transition: all 1s ease-in-out;
+}
+#btnTop a ion-icon {
+    font-size: 50px;
+    color: #AD00FF;
+}
+.btn:hover {
+    color: #FFF;
+    background-color: #AD00FF;
+}
+.section.dark .btn:hover {
+    color: #AD00FF;
+    background-color: #FFF;
+}
+#purchase.section .btn:hover {
+    border: 3px solid #111;
+    background-color: #111;
+    color: #FFF;
+}
+ion-icon:hover {
+    color: #56007F;
+}
+.section.social a ion-icon:hover {
+    color: #AD00FF;
+}
+#team img:hover{
+    transform: scale(1.5);
+}
+
