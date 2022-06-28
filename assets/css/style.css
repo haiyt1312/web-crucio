@@ -53,7 +53,9 @@ html{
     color: white;
     border-radius: 4px;
     text-align: center;
-    margin-left: 90%;
+    float: right;
+    margin-top: 12px;
+    margin-right: 28px;
     padding: 5px 20px;
     font-family: 'Halvetica Neue',Arial, Helvetica, sans-serif;
     box-shadow:  0 2px 0 #6f9a37;
@@ -650,6 +652,38 @@ input{
 .section.testimonials hr {
     background-color: #FFF;
 }
+#owl-testimonials{
+    opacity: 1;
+    display: block;
+}
+.owl-carousel{
+    position: relative;
+    width: 100%;
+}
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.owl-wrapper{
+    width: 6840px;
+    left: 0px;
+    display: block;
+    transition: all 2000ms ease 0s;
+    transform: translate3d(0px, 0px, 0px);
+    position: relative;
+}
+.owl-item{
+    width: 1140px;
+    float: left;
+}
+p.mini {
+    letter-spacing: 0;
+    line-height: 1;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0;
+}
 .section.clients {
     background-color: #F7F7F7;
     padding: 50px 0;
@@ -686,6 +720,9 @@ input{
 }
 .contact-form {
     padding-top: 100px;
+}
+.contact-form .btn{
+    float: right;
 }
 .col2 {
     width: 50%;
